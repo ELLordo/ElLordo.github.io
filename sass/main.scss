@@ -1,0 +1,301 @@
+@import "./utils/variable";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./base/typography";
+@import "./pages/menu.gout";
+@import "./pages/menu_enchan";
+
+body
+{
+    overflow-x: hidden;
+    font-family: 'Roboto','Times New Roman', Times, serif;
+}
+.main-title
+{
+    @include title;
+}
+
+.main-btn
+{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border:0;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    box-shadow:3px 3px 8px rgba(128, 128, 128, 0.382) inset;
+    cursor: pointer;
+    &__img{
+        margin-right: 10px;
+    }
+    .fa-solid
+    {
+        font-size: 1em;
+    }
+}
+.pres
+{   display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    text-align: center;
+    
+        &__main
+        {
+            box-sizing: border-box;
+            width: 70%;
+        }
+        &__second
+        {
+            box-sizing: border-box;
+            width: 95%;
+            margin-bottom: 30px;
+            margin-top: -5px;
+        }
+        &__btn
+        {
+            @include btn;
+        cursor: pointer;
+        @media screen and (min-width:992px)
+        {
+            width: 30%;
+        }
+        @media screen and (min-width:762px) and (max-width:992px)
+        {
+            width: 30%;
+        }
+    }
+        &__btn:hover 
+        {
+            background-color: adjust-hue($color-secondaire, $degrees: 30%);
+            box-shadow: 2px 2px 20px grey;
+        }
+}
+.choix
+{
+    margin-top: 100px;
+    @media screen and (min-width:992px)
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+        h3
+        {
+            font-size: x-large;
+            font-weight: bold;
+            margin-left: 20px;
+            margin-bottom: 40px;
+            @media screen and (min-width:992px)
+            {
+                width: 100%;
+            }
+        }
+        .fa-solid
+        {
+            font-size: 1.2em;
+        }
+        p
+        {
+            font-size:medium;
+            font-weight: bold
+        }
+        &__1
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            @media screen and (min-width:992px)
+            {
+                width: 30%;
+            }
+        }
+        &__1__btn
+        {
+            @include fonctionnement;
+            cursor: pointer;
+        }
+        &__1__btn:hover
+        {
+            background-color: rgb(243, 237, 254)
+        }
+        &__1__btn__num
+        {
+            @include num-btn;
+        }
+        &__1__btn__txt
+        {
+            margin-left: 20px;
+        }
+}
+
+.resto
+{
+    margin-top: 100px;
+    @media screen and (min-width:992px)
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    h3
+    {
+        font-size: x-large;
+        font-weight:bold;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    &__1 a 
+    {
+        text-decoration: none;
+        color:black;
+    }
+    &__1
+    {   
+        @include restaurant;
+        margin-bottom: 30px;
+        cursor: pointer;
+    @media screen and (min-width:992px)
+    {
+        width: 48%;
+        height: 400px;
+    }
+    }
+    &__1__all
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__1__txt
+    {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    &__1__img
+    {
+        @include restauranti;
+        @media screen and (min-width:992px)
+        {
+            height: 330px;
+        }
+        @media screen and (min-width:762px) and (max-width:992px)
+        {
+            height: 230px;
+        }
+    }
+    &__1__new
+    {
+        @include new;
+        @media screen and (min-width:992px)
+        {
+            margin-left: 35%;
+        }
+        @media screen and (min-width:762px) and (max-width:992px)
+        {
+            margin-left: 80%;
+        }
+    }
+    &__1 p
+    {
+       margin: 15px;
+       margin-block-end: 0;
+       margin-block-start: 0;
+       width: fit-content;
+    }
+    &__1 h4
+    {
+        margin: 15px;
+        margin-block-end: 5px;
+        margin-block-start: 10px;
+        width: fit-content;
+    }
+    &__1__like
+    {
+        @include like;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+} 
+.fa-heart 
+{
+    color: #FFF;
+    text-shadow: 0px 0px 6px  #000;
+}
+.fa-heart::before 
+{    
+    font-weight: bold;
+    transition: color 1s ease-out;
+}
+.fa-heart:hover::before
+{
+    color: $color-secondaire;
+    cursor: pointer;
+}
+.resto__2__img
+{
+    @include restauranti;
+    height: 230px;
+    @media screen and (min-width:992px)
+    {
+        height: 330px;
+    }
+}
+
+footer
+{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    box-sizing: border-box;
+    width: auto;
+    height: 200px;
+    ul 
+    {
+        list-style-type: none;
+        margin-top: -10px;
+    }
+    li 
+    {
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    h5
+    {
+        font-size: large;
+        font-family: 'Shrikhand','Times New Roman', Times, serif;
+        padding-top: 25px;
+        padding-left: 35px;
+    }
+    a 
+    {
+        text-decoration: none;
+        color:white;
+    }
+}
+.fa-solid
+{
+        font-size: 0.8em;
+        margin-right: 15px;
+}
+.loader
+{
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background-color: $color-tertiaire;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: disparition 3s 2s both;
+    h2 
+    {
+        color: $color-primaire;
+        font-size:2em;
+        font-family: 'Shrikhand','Times New Roman', Times, serif;
+        animation: slideTitre 2.5s ;
+    }
+}

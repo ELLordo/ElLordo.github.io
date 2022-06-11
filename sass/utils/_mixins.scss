@@ -1,0 +1,210 @@
+@mixin title {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px;
+    font-family: 'Shrikhand','Times New Roman', Times, serif;
+    justify-content: center;
+}
+
+@mixin btn {
+    display: flex;
+    box-sizing: border-box;
+    width: 68%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    border: 0;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 2px 2px 8px grey;
+    background: linear-gradient(to top,black,2%,$color-secondaire);
+    font-size: larger;
+}
+
+@mixin fonctionnement {
+    display: flex;
+    box-sizing: border-box;
+    width: 95%;
+    height: 70px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.425);
+    background-color: rgb(247, 246, 246);
+    padding: 3px;
+    align-items: center; 
+}
+
+@mixin num-btn {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: $color-primaire;
+    align-items: center;
+    color: white;
+    margin-right: 20px;
+    margin-left: -12px;   
+}
+
+@mixin restaurant {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.425);
+    flex-flow: column wrap;
+}
+
+@mixin restauranti {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border:0;
+    border-radius: 20px 20px 0 0 ;
+}
+
+@mixin new {
+    
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 65%;
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: $color-tertiaire;
+    border-radius: 5px;
+    padding: 5px;
+    color: darken($color-tertiaire , $amount: 40%);
+}
+@mixin like {
+        background-color: white;
+        border: 0;
+        font-size: x-large;
+}
+
+@mixin plat
+{
+    display: flex;
+    flex-flow: column wrap;
+    box-sizing: border-box;
+    width: 90%;
+    height: 70px;
+    border-radius: 20px ;
+    background-color: white;
+    align-content:space-between;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+@keyframes slide{
+    0%{
+        width: 2%;
+        opacity: 1;
+    }
+    20%{
+        width: 70px;
+        opacity: 1;
+    }
+    80%{
+        width: 70px;
+        opacity: 1;
+    }
+    100%{
+        width: 2%;
+        opacity: 0;
+    }
+}
+
+@keyframes slidep
+{
+    0%{
+        width: 100%;
+    }
+    20%{
+        width: 95%;
+    }
+    80%{
+        width: 95%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes platI
+{
+    0%{
+        transform:  translateX(10px);
+        opacity: 0;
+        
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+        
+    }
+    100%{
+        transform:  translateX(0px); 
+        opacity: 1;
+        
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(180deg);
+            opacity: 0;
+    }
+    60%{
+    opacity: 0;
+    }
+    70%{
+    opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes disparition
+{
+    from {
+        visibility: visible;
+        opacity: 1;
+      }
+      to {
+        visibility: hidden;
+        opacity: 0;
+      }
+}
+
+@keyframes slideTitre
+{
+    from{
+        margin-bottom: 100%;
+    }
+    to{
+        margin-bottom: 0%;
+    }
+}
+
+@keyframes apparition-menu
+{
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
