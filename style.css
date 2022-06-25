@@ -89,6 +89,12 @@
     transform: translateY(0);
   }
 }
+@keyframes coeur {
+  0% {
+    font-weight: bold;
+    color: white;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url("Police/shrikhand/build/Shrikhand-Regular.ttf");
@@ -104,15 +110,15 @@
   color: black;
 }
 
-.header__2 p {
+.header__2 .fa-arrow-left {
   font-size: x-large;
   font-weight: bold;
-  margin-left: 10px;
-  margin-top: 0;
+  margin-left: 20px;
+  margin-top: -10px;
 }
 
 .header__2 h1 {
-  margin-left: -10px;
+  margin-left: -20px;
   font-family: 'Shrikhand','Times New Roman', Times, serif;
 }
 
@@ -123,6 +129,9 @@
   height: 240px;
   object-fit: cover;
   margin-top: -15px;
+}
+.back__img img {
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .back__img img {
@@ -402,6 +411,9 @@ footer h5 {
   margin-bottom: -120px;
   overflow: hidden;
 }
+.back__img3 img {
+  width: 100%;
+}
 @media screen and (min-width: 992px) {
   .back__img3 img {
     width: 100%;
@@ -435,15 +447,16 @@ footer h5 {
   color: black;
 }
 
-.header__3 p {
+.header__3 .fa-arrow-left {
   font-size: x-large;
   font-weight: bold;
-  margin-left: 10px;
-  margin-top: 0;
+  margin-left: 20px;
+  margin-top: -10px;
 }
 
 .header__3 h1 {
-  margin-left: -10px;
+  margin-left: -20px;
+  font-family: 'Shrikhand','Times New Roman', Times, serif;
 }
 
 .selection2 {
@@ -501,6 +514,7 @@ footer h5 {
 body {
   overflow-x: hidden;
   font-family: 'Roboto','Times New Roman', Times, serif;
+  margin: 0;
 }
 
 .main-title {
@@ -522,6 +536,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: -20px;
+  margin-left: 0;
+  margin-right: 0;
   box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.382) inset;
   cursor: pointer;
 }
@@ -634,6 +650,9 @@ body {
 .choix__1__btn:hover {
   background-color: #f3edfe;
 }
+.choix__1__btn:hover .fa-solid {
+  color: #9356DC;
+}
 .choix__1__btn__num {
   display: flex;
   justify-content: center;
@@ -671,16 +690,18 @@ body {
 .resto__1 a {
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 .resto__1 {
   display: flex;
   box-sizing: border-box;
-  width: 100%;
+  width: 95%;
   height: 300px;
   border: 0;
   border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.425);
   flex-flow: column wrap;
+  margin-left: 10px;
   margin-bottom: 30px;
   cursor: pointer;
 }
@@ -715,6 +736,9 @@ body {
   .resto__1__img {
     height: 230px;
   }
+}
+.resto__1 img {
+  width: 100%;
 }
 .resto__1__new {
   position: absolute;
@@ -759,19 +783,10 @@ body {
   margin-top: 20px;
 }
 
-.fa-heart {
-  color: #FFF;
-  text-shadow: 0px 0px 6px  #000;
-}
-
-.fa-heart::before {
-  font-weight: bold;
-  transition: color 1s ease-out;
-}
-
 .fa-heart:hover::before {
   color: #FF79DA;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .resto__2__img {

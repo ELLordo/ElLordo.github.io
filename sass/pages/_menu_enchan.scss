@@ -8,6 +8,9 @@
     margin-top: -100px;
     margin-bottom: -120px;
     overflow: hidden;
+    img{
+        width: 100%;
+    }
     @media screen and (min-width:992px)
     {
         img 
@@ -46,16 +49,17 @@
     text-decoration: none;
     color: black;
 }
-.header__3 p
+.header__3 .fa-arrow-left
 {
     font-size: x-large;
     font-weight: bold;
-    margin-left: 10px;
-    margin-top: 0;
+    margin-left: 20px;
+    margin-top: -10px;
 }
 .header__3 h1
 {
-    margin-left: -10px;
+    margin-left: -20px;
+    font-family: 'Shrikhand','Times New Roman', Times, serif; 
 }
 .selection2
 {

@@ -53,12 +53,13 @@
 @mixin restaurant {
     display: flex;
     box-sizing: border-box;
-    width: 100%;
+    width: 95%;
     height: 300px;
     border: 0;
     border-radius: 20px;
     box-shadow: 3px 3px 10px rgba(128, 128, 128, 0.425);
     flex-flow: column wrap;
+    margin-left: 10px;
 }
 
 @mixin restauranti {
@@ -206,5 +207,12 @@
     100%{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes coeur
+{
+    0%{
+        font-weight: bold;
+        color: white;
     }
 }
